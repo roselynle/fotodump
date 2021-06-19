@@ -4,7 +4,7 @@ from django.shortcuts import render
 def gallery(request):
     return render(request, 'photos/gallery.html')
 
-def view(request):
+def view(request, photo_id):
     return render(request, 'photos/photo.html')
 
 def add(request):

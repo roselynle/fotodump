@@ -12,34 +12,59 @@
             integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     </head>
+
     <body class="m-5">
         <div class="cntainer">
-          <div class="row">
-              <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-header">
-                    Gategories
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">All</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-md-9">
-                <div class="row">
-                  <div class="card"></div>
-                    <img class="image-thumbnail" src="https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card" style="width: 18rem">
+                        <div class="card-header">Gategories</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">All</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
                     </div>
-                  </div>
                 </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card my-2">
+                                <img
+                                    class="image-thumbnail"
+                                    src="https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg"
+                                    class="card-img-top"
+                                    alt="..."
+                                />
+                                <div class="card-body">
+                                    <p>Category 1</p>
+                                    <a href="{% url 'photo' 5%}" class="btn btn-outline-dark btn-sm m">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                  <div class="row">
+                      <div class="col-md-4">
+                          <div class="card my-2">
+                              <img
+                                  class="image-thumbnail"
+                                  src="https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg"
+                                  class="card-img-top"
+                                  alt="..."
+                              />
+                              <div class="card-body">
+                                  <p>Category 1</p>
+                                  <a href="{% url 'photo' 5%}" class="btn btn-outline-dark btn-sm m">View</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
-          </div>
+            </div>
         </div>
     </body>
 </html>

@@ -16,7 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# access settings.py file
+from django.conf import settings
+from django.conf.urls.static import static
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('photos.urls')),
 ]
+
+# when you go to MEDIA_URL (images), it will go to MEDIA_ROOT and find the image
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

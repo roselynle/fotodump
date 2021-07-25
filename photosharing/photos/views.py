@@ -14,4 +14,6 @@ def view(request, photo_id):
     return render(request, 'photos/photo.html', {'photo' : photo})
 
 def add(request):
-    return render(request, 'photos/addphoto.html')
+    categories = Category.objects.all()
+    context = {'categories': categories}
+    return render(request, 'photos/addphoto.html', context)
